@@ -47,7 +47,7 @@ Finally, we need to make the AI know that the tool exists.
 To do that, just add an item to the "tools" list, defined on the bottom of this file.
 
 ```python
-tools = [tool1, tool2, **meow**]
+tools = [tool1, tool2, meow]
 ```
 
 (tool1 and tool2 are for purely showcasing purposes.)

@@ -4,3 +4,4 @@ test.py
 .env
 config.json
 __pycache__
+rebecca.py
