@@ -1,12 +1,13 @@
 # Rebecca - An AI virtual assistant
 
 - made by elidotpy, for fun, and for learning (don't expect much from me. please.)
+- i tried to keep it organized, i swear
 
 # Features
 
 ## Tools
 
-a tool is what the AI can do _besides_ chatting. For example, with tools, it can create, read and delete files.
+a tool is what the AI can do _besides_ chatting. with tools, it can do basically anything, as long as there's a tool for that.
 
 ### Tools Rebecca can use:
 

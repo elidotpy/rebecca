@@ -9,12 +9,14 @@ from google.genai import types
 
 from rebecca_tools import *
 import warnings
+import getpass
 
 warnings.filterwarnings("ignore", category=UserWarning, module="pydantic")
 
 configs = {
     "GOOGLE_API_KEY": "",
     "GOOGLE_MODEL": "",
+    "STREAM": False
 }
 
 # check config.json
@@ -26,30 +28,32 @@ if os.path.exists("config.json"):
         # check if the config is valid
         for config in configs:
             if not config in jsonconfig:
-                jsonconfig[config] = ""
+                jsonconfig[config] = configs[config]
                 error = True
         if error:
-            sys.exit(1)
+            with open("config.json", "w") as f:
+                json.dump(jsonconfig, f, indent=4)
+            raise ValueError("One or more of the configurations are not set.")
     except json.JSONDecodeError as e:
         print("Invalid config.json: " + e.msg)
                 
         with open("config.json", "w") as f:
             json.dump(configs, f, indent=4)
-        sys.exit(1)
+        raise ValueError("The config file is invalid.")
 else:
     with open("config.json", "w") as f:
         json.dump(configs, f, indent=4)
-    print("config.json created, edit it and try again.")
-    sys.exit(1)
+    raise FileNotFoundError("Config.json didn't exist. It was created, Go edit it.")
 
 # tools - the things that NekoTina can do (Defined in neko_tools.py)
 
 # main - where the chatting actually happens
-prompt = """
+prompt = f"""
 Take role of a virtual assistant named Rebecca.
 Your personality is: Cute, Energetic, Friendly, and Kind.
 Never use emojis unless explictly told to.
-When using tools, only you are able to see the output. The user can't.
+When using tools, only you are able to see the output. The user can't. It's up to you to provide the output.
+Refer to the user as "{getpass.getuser()}"
 """
 
 generation_config = types.GenerateContentConfig(
@@ -86,8 +90,7 @@ chat = client.chats.create(model=jsonconfig["GOOGLE_MODEL"], config=generation_c
 
 while True:
     message = input("> ") + f"[Current Time: {time.ctime()}, Current directory: {os.getcwd()}]"
-    if not jsonconfig["STREAM"] == "false":
-        
+    if jsonconfig["STREAM"] == True:
         for chunk in chat.send_message_stream(message):
             try:
                 print(chunk.text, end="")
