@@ -1,5 +1,7 @@
 # Rebecca - An AI virtual assistant
 
+(Para a versão em portugues, [clique aqui.](./pt_br.README.md))
+
 - made by elidotpy, for fun, and for learning (don't expect much from me. please.)
 - i tried to keep it organized, i swear
 
