@@ -64,4 +64,4 @@ tools = [ferramenta1, ferramenta3] # era [ferramenta1, ferramenta2, ferramenta3]
 
 Agora a Rebecca não consegue mais usar a ferramenta.
 
-###### Creditos: Gemini 2.0 Flash por essa traduçao, tava com muita preguiça. Até IAs merece credito, sabia?
+###### Creditos: Gemini 2.0 Flash por essa traduçao, tava com muita preguiça. até IAs merece credito, sabia?
