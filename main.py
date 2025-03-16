@@ -2,17 +2,16 @@
 The main module, the one that makes rebecca work.
 """
 
-# imports 
+# imports
 import os
 import time
 import warnings
-from utils import errors
 
 from google import genai
 from google.genai import types
 
 from rebecca_tools import tools
-from utils import configs, persona
+from utils import configs, errors, persona
 from utils.history import History
 from utils.logs import Logger, VerbosityLevel
 
@@ -115,5 +114,5 @@ try:
         message = get_user_input()
         try_to_get_response(message, GENERATIONCONFIG["STREAM"])
 except KeyboardInterrupt:
-    print("\nSaving history...")
+    LOGGER.info("\nSaving history...")
     chat_history.save_history("history.json")
