@@ -30,4 +30,4 @@ class History:
     
     def save_history(self, file_path:str):
         with open(file_path, "w", encoding="utf-8") as f:
-            json.dump(self.history, f)
+            json.dump(self.history, f, indent=4)
