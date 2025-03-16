@@ -40,7 +40,7 @@ Eu recomendo usar `"gemini-2.0-flash"` como o modelo.
 Se `STREAM` for `true`, a resposta de Rebecca sera mostrada pedaço por pedaço. se não, vai ser mostrado tudo de uma vez
 
 ### 5 - Executar `main.py`... DENOVO.
-Se tu fez tudo certinho, você deve ser isso
+Se tu fez tudo certinho, você deve ver isso
 ```
 > 
 ```
@@ -64,7 +64,7 @@ uma ferramenta é o que a Rebecca pode fazer _além_ de conversar. Ela pode faze
 ### Ferramentas desabilitadas por padrão:
 - Terminal (perigoso)
 
-(leia [docs/tools.md](docs/pt_br.tools.md) para saber como adicionar/remover ferramentas)
+(leia [docs/tools.md](./docs/pt_br/tools.md) para saber como adicionar/remover ferramentas)
 
 # Mudanças
 
@@ -72,3 +72,7 @@ uma ferramenta é o que a Rebecca pode fazer _além_ de conversar. Ela pode faze
 
 1. Personalidade adicionada
 2. Ferramentas adicionadas
+
+## V1.0.1 - Atualização de Multiplas Personalidades
+
+1. [personas](./docs/pt_br/personas.md) adicionadas.

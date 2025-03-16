@@ -1,30 +1,30 @@
 # Ferramentas
 
-Ferramentas são as coisas que a Rebecca consegue fazer.
+`Ferramentas` são as coisas que a Rebecca consegue fazer.
 
 Todas as ferramentas são definidas em `"./rebecca_tools.py"`
 
 # Como criar a sua própria ferramenta?
 
-Primeiro, você precisa declarar uma função com o nome da ferramenta. Digamos que queremos fazer uma função chamada "miau"
+Primeiro, você precisa declarar uma função com o nome da ferramenta. Digamos que queremos fazer uma função chamada "`miau`"
 
 ```python
 def miau():
 ```
 
-e queremos dar a ela o argumento "vezes", para que ela imprima miau {vezes} vezes.
+e queremos dar a ela o argumento "`vezes`", para que ela imprima miau `{vezes}` vezes.
 
 ```python
 def miau(vezes):
 ```
 
-Agora, precisamos dar uma dica do tipo do argumento. Isso é necessário, para que a IA não quebre, ou tente usar um tipo diferente do que você pretendia. Neste caso, é um inteiro. Você também pode adicionar uma `dica de tipo de retorno`, mas não é realmente necessário.
+Agora, precisamos dar uma `dica do tipo do argumento.` Isso é necessário, para que a IA não quebre, ou tente usar um tipo diferente do que você pretendia. Neste caso, é um inteiro. Você também pode adicionar uma `dica de tipo de retorno`, mas não é realmente necessário.
 
 ```python
 def miau(vezes:int):
 ```
 
-Okay, agora, ela precisa de uma docstring, para que a IA saiba o que ela faz.
+Okay, agora, ela precisa de uma `docstring`, para que a IA saiba o que ela faz.
 
 ```python
 def miau(vezes:int):
@@ -44,7 +44,7 @@ def miau(vezes:int):
 ```
 
 Finalmente, precisamos fazer a IA saber que a ferramenta existe.
-Para fazer isso, basta adicionar um item à lista "tools", definida na parte inferior deste arquivo.
+Para fazer isso, basta adicionar um item à lista "`tools`", definida na parte inferior deste arquivo.
 
 ```python
 tools = [ferramenta1, ferramenta2, miau]
