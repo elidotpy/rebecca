@@ -1,7 +1,6 @@
-README.html
 test.py
+configs/
 .venv
-.env
-config.json
+.vscode
 __pycache__
-rebecca.py
+history.json
